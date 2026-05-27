@@ -1,6 +1,6 @@
 # agents/ (Phase 2+ — stub)
 
-Multi-agent orchestration mapped to [concept.md](../concept.md) reference stack:
+Multi-agent orchestration mapped to [concept.md](../docs/concept.md) reference stack:
 
 | Agent | Package |
 |-------|---------|

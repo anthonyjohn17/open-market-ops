@@ -11,7 +11,7 @@ OpportunityOS turns messy feeds into ranked **opportunity objects** using liquid
 
 Not a generic scraper — a **workflow-driven** pipeline where vertical intelligence lives in versioned YAML assets ([`workflows/`](workflows/)) and JSON schemas ([`schemas/`](schemas/)).
 
-Docs: [Concept](concept.md) · [Product vision](ideas.md) · [MVP PRD](docs/PRD-MVP.md) · [Roadmap](docs/FUTURE-EXPANSION.md) · [Architecture](docs/ARCHITECTURE.md)
+Docs: [Concept](docs/concept.md) · [Product vision](docs/ideas.md) · [MVP PRD](docs/PRD-MVP.md) · [Roadmap](docs/FUTURE-EXPANSION.md) · [Architecture](docs/ARCHITECTURE.md)
 
 ---
 

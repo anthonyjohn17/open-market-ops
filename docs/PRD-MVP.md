@@ -10,8 +10,8 @@
 
 | Document | Purpose |
 |----------|---------|
-| [concept.md](../concept.md) | Liquidity intelligence framework (5 steps + monetization archetypes) |
-| [ideas.md](../ideas.md) | Repository vision, monorepo architecture, OSS wedges |
+| [concept.md](./concept.md) | Liquidity intelligence framework (5 steps + monetization archetypes) |
+| [ideas.md](./ideas.md) | Repository vision, monorepo architecture, OSS wedges |
 | [FUTURE-EXPANSION.md](./FUTURE-EXPANSION.md) | Post-MVP modules and roadmap |
 | [schemas/README.md](../schemas/README.md) | JSON Schema contracts |
 
@@ -75,7 +75,7 @@ AI automation agencies and operators manually scan job boards for hiring cluster
 
 ### 2.2 Opportunity
 
-Job postings are a **pre-consensus feed** ([concept.md](../concept.md)): pain and budget appear before vendors pitch. A narrow wedge with sharp I/O (jobs in → scored leads out) demonstrates liquidity intelligence without boiling the ocean.
+Job postings are a **pre-consensus feed** ([concept.md](./concept.md)): pain and budget appear before vendors pitch. A narrow wedge with sharp I/O (jobs in → scored leads out) demonstrates liquidity intelligence without boiling the ocean.
 
 ### 2.3 User personas (MVP)
 
@@ -96,7 +96,7 @@ Job postings are a **pre-consensus feed** ([concept.md](../concept.md)): pain an
 - Encode **five-step ontology** in schemas and opportunity records  
 - Make **workflows** the unit of vertical intelligence (moat)  
 - Ship **hiring-signals** wedge as reference implementation  
-- Stub monorepo packages for **future dependency flow** per [ideas.md](../ideas.md)  
+- Stub monorepo packages for **future dependency flow** per [ideas.md](./ideas.md)  
 - Provide `src/` skeleton for a future GitHub Pages product site (concept + liquidity narrative)
 
 ### 3.2 Non-goals (MVP)

@@ -51,4 +51,4 @@ opportunity-scoring → buyer-matching → monetization-engine → output-writer
 
 ## Package dependency rule
 
-Dependencies flow **upward only** (no cycles). See [ideas.md](../ideas.md).
+Dependencies flow **upward only** (no cycles). See [ideas.md](./ideas.md).

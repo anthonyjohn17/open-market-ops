@@ -8,4 +8,4 @@
 | [compliance.md](./compliance.md) | Feed connector ToS notes |
 | [wedges/hiring-signals.md](./wedges/hiring-signals.md) | MVP wedge playbook |
 
-Concept & vision (repo root): [concept.md](../concept.md), [ideas.md](../ideas.md)
+Concept & vision: [concept.md](./concept.md), [ideas.md](./ideas.md)

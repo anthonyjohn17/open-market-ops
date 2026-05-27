@@ -5,7 +5,7 @@
 **Last updated:** May 2026  
 **Prerequisite:** [PRD-MVP.md](./PRD-MVP.md) v0.1.0 complete  
 
-**Related:** [concept.md](../concept.md) · [ideas.md](../ideas.md)
+**Related:** [concept.md](./concept.md) · [ideas.md](./ideas.md)
 
 ---
 
@@ -130,7 +130,7 @@ Secondary: `data_product` (package feed as agency alert product)
 ### 2.5 Acceptance criteria
 
 - [ ] Every opportunity has `monetization.recommended[]` with ≥1 archetype + reason  
-- [ ] Aligns with [concept.md](../concept.md) archetype table for Example 3  
+- [ ] Aligns with [concept.md](./concept.md) archetype table for Example 3  
 
 ---
 
@@ -232,7 +232,7 @@ Each wedge gets `docs/wedges/<id>.md`: I/O contract, example opportunity, eval d
 
 ### 6.1 Purpose
 
-Quant-style discipline for signal and scoring quality ([ideas.md](../ideas.md)).
+Quant-style discipline for signal and scoring quality ([ideas.md](./ideas.md)).
 
 ### 6.2 Package: `@omo/evals` (new)
 
@@ -344,7 +344,7 @@ Fastify or Hono; OpenAPI spec generated from schemas.
 
 ### 10.1 Purpose
 
-**Option 2** from [ideas.md](../ideas.md): specialized agents per concept layer for complex wedges and demos.
+**Option 2** from [ideas.md](./ideas.md): specialized agents per concept layer for complex wedges and demos.
 
 ### 10.2 Agent roster (maps to concept.md)
 
@@ -414,7 +414,7 @@ Embedding model choice documented; `OPENAI_API_KEY` or local model.
 
 ### 12.1 Purpose
 
-**Option 3** — knowledge graph of entities and relationships ([ideas.md](../ideas.md)).
+**Option 3** — knowledge graph of entities and relationships ([ideas.md](./ideas.md)).
 
 ### 12.2 Entity nodes
 
@@ -544,7 +544,7 @@ Opt-in only; CAN-SPAM / GDPR notes in compliance doc.
 
 ### 17.1 Purpose
 
-Community shares wedge workflows — moat compounds ([ideas.md](../ideas.md)).
+Community shares wedge workflows — moat compounds ([ideas.md](./ideas.md)).
 
 ### 17.2 Mechanics
 
