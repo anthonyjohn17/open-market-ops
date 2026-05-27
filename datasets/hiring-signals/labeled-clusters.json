@@ -1,0 +1,474 @@
+{
+  "version": "1.0",
+  "description": "52 labeled clusters for hiring-signals eval",
+  "labels": [
+    {
+      "id": "pos_1",
+      "company_key": "acmeinsurance.example",
+      "role_cluster": "customer_support",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": true,
+      "notes": "Synthetic positive eval case"
+    },
+    {
+      "id": "pos_2",
+      "company_key": "betacorp.io",
+      "role_cluster": "customer_support",
+      "expected": "positive",
+      "synthetic_hire_count": 3,
+      "urgency_language": true,
+      "notes": "Synthetic positive eval case"
+    },
+    {
+      "id": "pos_3",
+      "company_key": "helpdesk-co.com",
+      "role_cluster": "customer_support",
+      "expected": "positive",
+      "synthetic_hire_count": 5,
+      "urgency_language": false,
+      "notes": "Synthetic positive eval case"
+    },
+    {
+      "id": "pos_4",
+      "company_key": "claimsfast.net",
+      "role_cluster": "claims_processing",
+      "expected": "positive",
+      "synthetic_hire_count": 3,
+      "urgency_language": true,
+      "notes": "Synthetic positive eval case"
+    },
+    {
+      "id": "pos_5",
+      "company_key": "medclaims.org",
+      "role_cluster": "claims_processing",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": true,
+      "notes": "Synthetic positive eval case"
+    },
+    {
+      "id": "pos_6",
+      "company_key": "supporthub.io",
+      "role_cluster": "virtual_assistant",
+      "expected": "positive",
+      "synthetic_hire_count": 3,
+      "urgency_language": false,
+      "notes": "Synthetic positive eval case"
+    },
+    {
+      "id": "pos_7",
+      "company_key": "bpo-scale.com",
+      "role_cluster": "data_entry",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": true,
+      "notes": "Synthetic positive eval case"
+    },
+    {
+      "id": "pos_8",
+      "company_key": "opsflow.co",
+      "role_cluster": "customer_support",
+      "expected": "positive",
+      "synthetic_hire_count": 3,
+      "urgency_language": true,
+      "notes": "Synthetic positive eval case"
+    },
+    {
+      "id": "pos_9",
+      "company_key": "retailhelp.com",
+      "role_cluster": "customer_support",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": false,
+      "notes": "Synthetic positive eval case"
+    },
+    {
+      "id": "pos_10",
+      "company_key": "fintech-support.io",
+      "role_cluster": "customer_support",
+      "expected": "positive",
+      "synthetic_hire_count": 3,
+      "urgency_language": true,
+      "notes": "Synthetic positive eval case"
+    },
+    {
+      "id": "neg_11",
+      "company_key": "solosaas.example",
+      "role_cluster": "other",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Synthetic negative eval case"
+    },
+    {
+      "id": "neg_12",
+      "company_key": "devtools.inc",
+      "role_cluster": "other",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Synthetic negative eval case"
+    },
+    {
+      "id": "neg_13",
+      "company_key": "megacorp.com",
+      "role_cluster": "customer_support",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Synthetic negative eval case"
+    },
+    {
+      "id": "neg_14",
+      "company_key": "agency-staffing.net",
+      "role_cluster": "customer_support",
+      "expected": "negative",
+      "synthetic_hire_count": 2,
+      "urgency_language": false,
+      "notes": "Synthetic negative eval case"
+    },
+    {
+      "id": "neg_15",
+      "company_key": "random-hire.co",
+      "role_cluster": "other",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Synthetic negative eval case"
+    },
+    {
+      "id": "neg_16",
+      "company_key": "engineer-only.dev",
+      "role_cluster": "other",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Synthetic negative eval case"
+    },
+    {
+      "id": "neg_17",
+      "company_key": "single-role-llc.com",
+      "role_cluster": "claims_processing",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Synthetic negative eval case"
+    },
+    {
+      "id": "neg_18",
+      "company_key": "stale-post-corp.com",
+      "role_cluster": "customer_support",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Synthetic negative eval case"
+    },
+    {
+      "id": "neg_19",
+      "company_key": "wrong-taxonomy.biz",
+      "role_cluster": "other",
+      "expected": "negative",
+      "synthetic_hire_count": 2,
+      "urgency_language": false,
+      "notes": "Synthetic negative eval case"
+    },
+    {
+      "id": "neg_20",
+      "company_key": "part-time-only.io",
+      "role_cluster": "customer_support",
+      "expected": "negative",
+      "synthetic_hire_count": 2,
+      "urgency_language": false,
+      "notes": "Synthetic negative eval case"
+    },
+    {
+      "id": "pad_21",
+      "company_key": "padco21.example",
+      "role_cluster": "customer_support",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_22",
+      "company_key": "padco22.example",
+      "role_cluster": "data_entry",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_23",
+      "company_key": "padco23.example",
+      "role_cluster": "customer_support",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_24",
+      "company_key": "padco24.example",
+      "role_cluster": "data_entry",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_25",
+      "company_key": "padco25.example",
+      "role_cluster": "customer_support",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_26",
+      "company_key": "padco26.example",
+      "role_cluster": "data_entry",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_27",
+      "company_key": "padco27.example",
+      "role_cluster": "customer_support",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_28",
+      "company_key": "padco28.example",
+      "role_cluster": "data_entry",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_29",
+      "company_key": "padco29.example",
+      "role_cluster": "customer_support",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_30",
+      "company_key": "padco30.example",
+      "role_cluster": "data_entry",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_31",
+      "company_key": "padco31.example",
+      "role_cluster": "customer_support",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_32",
+      "company_key": "padco32.example",
+      "role_cluster": "data_entry",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_33",
+      "company_key": "padco33.example",
+      "role_cluster": "customer_support",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_34",
+      "company_key": "padco34.example",
+      "role_cluster": "data_entry",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_35",
+      "company_key": "padco35.example",
+      "role_cluster": "customer_support",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_36",
+      "company_key": "padco36.example",
+      "role_cluster": "data_entry",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_37",
+      "company_key": "padco37.example",
+      "role_cluster": "customer_support",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_38",
+      "company_key": "padco38.example",
+      "role_cluster": "data_entry",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_39",
+      "company_key": "padco39.example",
+      "role_cluster": "customer_support",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_40",
+      "company_key": "padco40.example",
+      "role_cluster": "data_entry",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_41",
+      "company_key": "padco41.example",
+      "role_cluster": "customer_support",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_42",
+      "company_key": "padco42.example",
+      "role_cluster": "data_entry",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_43",
+      "company_key": "padco43.example",
+      "role_cluster": "customer_support",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_44",
+      "company_key": "padco44.example",
+      "role_cluster": "data_entry",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_45",
+      "company_key": "padco45.example",
+      "role_cluster": "customer_support",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_46",
+      "company_key": "padco46.example",
+      "role_cluster": "data_entry",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_47",
+      "company_key": "padco47.example",
+      "role_cluster": "customer_support",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_48",
+      "company_key": "padco48.example",
+      "role_cluster": "data_entry",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_49",
+      "company_key": "padco49.example",
+      "role_cluster": "customer_support",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_50",
+      "company_key": "padco50.example",
+      "role_cluster": "data_entry",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_51",
+      "company_key": "padco51.example",
+      "role_cluster": "customer_support",
+      "expected": "positive",
+      "synthetic_hire_count": 4,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    },
+    {
+      "id": "pad_52",
+      "company_key": "padco52.example",
+      "role_cluster": "data_entry",
+      "expected": "negative",
+      "synthetic_hire_count": 1,
+      "urgency_language": false,
+      "notes": "Padded eval row"
+    }
+  ]
+}

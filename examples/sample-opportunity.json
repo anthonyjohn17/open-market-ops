@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "id": "opp_sample000001",
+    "run_id": "run_sample0001",
+    "workflow_id": "ai_support_agency_leads",
+    "workflow_version": "1.0.0",
+    "wedge": "hiring-signals",
+    "created_at": "2026-05-20T12:00:00.000Z",
+    "framework_complete": false
+  },
+  "feed": {
+    "sources": ["indeed", "career_page"],
+    "item_count": 4,
+    "evidence": [
+      {
+        "url": "https://indeed.example/job/1",
+        "title": "Customer Support Specialist",
+        "posted_at": "2026-05-18T00:00:00.000Z"
+      }
+    ]
+  },
+  "asset": {
+    "type": "operational_pain_signal",
+    "summary": "Acme Insurance Co hiring 4 customer support roles in 14d",
+    "company": { "name": "Acme Insurance Co", "domain": "acmeinsurance.example" },
+    "role_cluster": "customer_support",
+    "hire_count": 4,
+    "pain_category": "customer_support"
+  },
+  "trigger": {
+    "type": "hiring_surge",
+    "strength": "high",
+    "detected_at": "2026-05-20T12:00:00.000Z",
+    "reasons": ["4 similar roles in 14 days (min 3)", "Urgency language: immediate, urgent"],
+    "window_days": 14
+  },
+  "buyer": {
+    "source": "workflow_stub",
+    "segments": ["ai_support_agencies", "automation_consultancies", "bpo_operators"],
+    "buyer_density": "high"
+  },
+  "monetization": {
+    "source": "workflow_stub",
+    "recommended": ["lead_generation", "retainer"],
+    "primary": "lead_generation",
+    "rationale": "Workflow-declared paths for wedge hiring-signals. Enable monetization-engine in v0.2+.",
+    "monetization_speed": "fast"
+  },
+  "scores": {
+    "opportunity_score": 82,
+    "confidence": 0.78,
+    "spread_estimate": "medium-high",
+    "urgency": "high",
+    "buyer_density": "high",
+    "monetization_potential": "high",
+    "competition": "medium",
+    "liquidity_speed": "fast",
+    "eval_version": "scoring/v1"
+  }
+}

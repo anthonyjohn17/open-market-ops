@@ -1,0 +1,54 @@
+# Copy this file to create a new OSS wedge workflow.
+# 1. Rename file: workflows/<your-wedge>.yaml
+# 2. Validate: pnpm omo validate workflows/<your-wedge>.yaml
+# 3. Document: docs/wedges/<your-wedge>.md
+
+name: your_workflow_name
+version: "0.1.0"
+description: One-line wedge description aligned with concept.md
+wedge: your-wedge-id
+
+feed:
+  connectors:
+    - id: connector_id
+      config: {}
+
+detect:
+  rules: []
+  urgency_keywords: []
+  llm_classify:
+    enabled: false
+    taxonomy: []
+
+asset:
+  type: generic
+  extract: []
+
+trigger:
+  min_similar_roles: 1
+  window_days: 30
+  boost_if: []
+
+buyer:
+  segments: []
+  match: buyer-matching/v1
+
+monetize:
+  recommended:
+    - lead_generation
+  scoring: monetization-engine/v1
+
+scoring:
+  min_opportunity_score: 50
+  weights:
+    urgency: 0.2
+    buyer_density: 0.2
+    monetization_potential: 0.2
+    competition: 0.2
+    liquidity_speed: 0.2
+
+output:
+  formats:
+    - opportunity_cards
+    - csv
+  min_score: 60

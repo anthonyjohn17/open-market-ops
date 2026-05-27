@@ -1,0 +1,15 @@
+{
+  "run_id": "run_86b405f22c59",
+  "workflow_id": "ai_support_agency_leads",
+  "workflow_version": "1.0.0",
+  "wedge": "hiring-signals",
+  "started_at": "2026-05-27T21:17:12.743Z",
+  "finished_at": "2026-05-27T21:17:12.747Z",
+  "connector_ids": [
+    "indeed",
+    "career_page",
+    "linkedin_jobs"
+  ],
+  "opportunity_count": 1,
+  "mock_feeds": true
+}

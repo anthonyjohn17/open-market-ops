@@ -1,0 +1,33 @@
+{
+  "name": "open-market-ops",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OpportunityOS — open-source liquidity intelligence framework",
+  "author": "John Anthony",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthonyjohn17/open-market-ops.git"
+  },
+  "homepage": "https://anthonyjohn17.github.io/open-market-ops/",
+  "bugs": {
+    "url": "https://github.com/anthonyjohn17/open-market-ops/issues"
+  },
+  "scripts": {
+    "build": "pnpm -r --filter '!@omo/site' run build",
+    "test": "pnpm -r --filter '!@omo/site' run test",
+    "lint": "pnpm -r run lint",
+    "omo": "node apps/cli/dist/cli.js",
+    "validate:workflows": "node scripts/validate-workflows.mjs",
+    "validate:schemas": "pnpm omo validate workflows/hiring-signals.yaml",
+    "dev:site": "pnpm --filter @omo/site dev"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@9.15.0"
+}

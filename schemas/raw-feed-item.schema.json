@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openmarketops.dev/schemas/raw-feed-item.schema.json",
+  "title": "RawFeedItem",
+  "type": "object",
+  "required": ["id", "source", "fetched_at", "title", "description", "url"],
+  "properties": {
+    "id": { "type": "string" },
+    "source": { "type": "string" },
+    "external_id": { "type": "string" },
+    "fetched_at": { "type": "string", "format": "date-time" },
+    "company_name": { "type": "string" },
+    "company_domain": { "type": ["string", "null"] },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "location": { "type": "string" },
+    "posted_at": { "type": "string" },
+    "url": { "type": "string" },
+    "metadata": { "type": "object" }
+  }
+}

@@ -1,0 +1,61 @@
+# STUB — validate only until connectors ship (v0.3+)
+# Concept: Local Business Closure Asset Agent — see concept.md Example 2
+
+name: local_closure_radar
+version: "0.0.1"
+description: Track distressed local assets and operational gaps (not runnable in v0.1)
+wedge: local-closures
+
+feed:
+  connectors:
+    - id: google_maps
+      config: { enabled: false }
+    - id: state_filings
+      config: { enabled: false }
+
+detect:
+  rules:
+    - business_closure
+    - liquidation_listing
+
+asset:
+  type: local_business
+  extract:
+    - equipment
+    - domain
+    - phone_number
+    - customer_demand_proxy
+
+trigger:
+  window_days: 30
+  boost_if:
+    - bankruptcy_filing
+
+buyer:
+  segments:
+    - local_competitors
+    - equipment_resellers
+    - restaurant_groups
+  match: buyer-matching/v1
+
+monetize:
+  recommended:
+    - broker
+    - lead_generation
+    - retainer
+  scoring: monetization-engine/v1
+
+scoring:
+  min_opportunity_score: 55
+  weights:
+    urgency: 0.3
+    buyer_density: 0.2
+    monetization_potential: 0.25
+    competition: 0.1
+    liquidity_speed: 0.15
+
+output:
+  formats:
+    - opportunity_cards
+    - alerts_jsonl
+  min_score: 65

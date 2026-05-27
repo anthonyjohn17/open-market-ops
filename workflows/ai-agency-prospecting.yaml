@@ -1,0 +1,65 @@
+# STUB — GTM variant of hiring-signals (same feeds, agency positioning)
+# Runnable when hiring-signals connectors are enabled
+
+name: ai_agency_prospecting
+version: "0.0.1"
+description: Surface companies likely needing automation (hiring-signals variant)
+wedge: ai-agency-prospecting
+
+feed:
+  connectors:
+    - id: indeed
+      config:
+        query: operations analyst OR customer support
+        location: united states
+    - id: career_page
+      config:
+        urls: []
+
+detect:
+  rules:
+    - repeated_hiring_same_role
+    - urgency_language
+  llm_classify:
+    enabled: false
+    taxonomy:
+      - customer_support
+      - operations
+      - data_entry
+
+asset:
+  type: operational_pain_signal
+  extract:
+    - company
+    - role_cluster
+    - hire_count
+
+trigger:
+  min_similar_roles: 2
+  window_days: 21
+
+buyer:
+  segments:
+    - ai_automation_agencies
+    - ai_consultancies
+  match: buyer-matching/v1
+
+monetize:
+  recommended:
+    - lead_generation
+  scoring: monetization-engine/v1
+
+scoring:
+  min_opportunity_score: 45
+  weights:
+    urgency: 0.3
+    buyer_density: 0.25
+    monetization_potential: 0.2
+    competition: 0.15
+    liquidity_speed: 0.1
+
+output:
+  formats:
+    - csv
+    - alerts_jsonl
+  min_score: 55

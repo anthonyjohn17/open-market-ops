@@ -1,0 +1,89 @@
+# Reference MVP workflow — Hiring Signal → AI Agency Lead Engine
+# Validates against schemas/workflow.schema.json
+# See docs/wedges/hiring-signals.md
+
+name: ai_support_agency_leads
+version: "1.0.0"
+description: >
+  Detect companies hiring clusters of support-class roles and surface scored
+  opportunities for AI automation agencies (liquidity intelligence wedge).
+wedge: hiring-signals
+
+feed:
+  schedule: "0 */6 * * *"
+  connectors:
+    - id: indeed
+      config:
+        query: customer support
+        location: remote
+        max_pages: 2
+    - id: career_page
+      config:
+        urls: []
+    - id: linkedin_jobs
+      config:
+        enabled: false
+        note: "Stub until official API adapter; use MOCK_FEEDS for dev"
+
+detect:
+  rules:
+    - repeated_hiring_same_role
+    - urgency_language
+  urgency_keywords:
+    - immediate
+    - urgent
+    - asap
+    - start immediately
+    - hiring multiple
+    - high volume
+  llm_classify:
+    enabled: false
+    prompt_version: v1
+    taxonomy:
+      - customer_support
+      - claims_processing
+      - data_entry
+      - virtual_assistant
+
+asset:
+  type: operational_pain_signal
+  extract:
+    - company
+    - role_cluster
+    - hire_count
+
+trigger:
+  min_similar_roles: 3
+  window_days: 14
+  boost_if:
+    - recently_funded
+    - urgency_language
+
+buyer:
+  segments:
+    - ai_support_agencies
+    - automation_consultancies
+    - bpo_operators
+  match: buyer-matching/v1
+
+monetize:
+  recommended:
+    - lead_generation
+    - retainer
+  scoring: monetization-engine/v1
+
+scoring:
+  min_opportunity_score: 50
+  weights:
+    urgency: 0.25
+    buyer_density: 0.2
+    monetization_potential: 0.25
+    competition: 0.15
+    liquidity_speed: 0.15
+
+output:
+  formats:
+    - opportunity_cards
+    - csv
+    - alerts_jsonl
+  min_score: 60

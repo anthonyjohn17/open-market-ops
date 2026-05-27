@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openmarketops.dev/schemas/signal.schema.json",
+  "title": "Signal",
+  "type": "object",
+  "required": ["id", "company_key", "pain_category", "role_cluster", "hire_count", "evidence"],
+  "properties": {
+    "id": { "type": "string" },
+    "company_key": { "type": "string" },
+    "pain_category": { "type": "string" },
+    "role_cluster": { "type": "string" },
+    "hire_count": { "type": "integer", "minimum": 0 },
+    "evidence": {
+      "type": "array",
+      "items": { "type": "string", "description": "RawFeedItem id references" }
+    },
+    "urgency_hits": { "type": "array", "items": { "type": "string" } }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openmarketops.dev/schemas/workflow.schema.json",
+  "title": "Workflow",
+  "description": "Workflow-as-asset: declarative pipeline config for a wedge",
+  "type": "object",
+  "required": ["name", "version", "wedge", "feed", "detect", "asset", "trigger", "buyer", "monetize", "output"],
+  "properties": {
+    "name": { "type": "string" },
+    "version": { "type": "string" },
+    "description": { "type": "string" },
+    "wedge": { "type": "string" },
+    "feed": {
+      "type": "object",
+      "required": ["connectors"],
+      "properties": {
+        "connectors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id"],
+            "properties": {
+              "id": { "type": "string" },
+              "config": { "type": "object" }
+            }
+          }
+        },
+        "schedule": { "type": "string", "description": "Cron expression (worker phase)" }
+      }
+    },
+    "detect": {
+      "type": "object",
+      "properties": {
+        "rules": { "type": "array", "items": { "type": "string" } },
+        "llm_classify": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean", "default": false },
+            "taxonomy": { "type": "array", "items": { "type": "string" } },
+            "prompt_version": { "type": "string" }
+          }
+        },
+        "urgency_keywords": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "asset": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "extract": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "trigger": {
+      "type": "object",
+      "properties": {
+        "min_similar_roles": { "type": "integer", "minimum": 1 },
+        "window_days": { "type": "integer", "minimum": 1 },
+        "boost_if": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "buyer": {
+      "type": "object",
+      "properties": {
+        "segments": { "type": "array", "items": { "type": "string" } },
+        "match": { "type": "string", "description": "Engine version path, e.g. buyer-matching/v1" }
+      }
+    },
+    "monetize": {
+      "type": "object",
+      "properties": {
+        "recommended": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["flip", "broker", "retainer", "relaunch", "lead_generation", "data_product"]
+          }
+        },
+        "scoring": { "type": "string" }
+      }
+    },
+    "scoring": {
+      "type": "object",
+      "properties": {
+        "weights": {
+          "type": "object",
+          "properties": {
+            "urgency": { "type": "number" },
+            "buyer_density": { "type": "number" },
+            "monetization_potential": { "type": "number" },
+            "competition": { "type": "number" },
+            "liquidity_speed": { "type": "number" }
+          }
+        },
+        "min_opportunity_score": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "formats": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["opportunity_cards", "csv", "alerts_jsonl"] }
+        },
+        "min_score": { "type": "number" }
+      }
+    }
+  }
+}

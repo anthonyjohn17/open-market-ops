@@ -1,0 +1,67 @@
+[
+  {
+    "id": "indeed_001",
+    "source": "indeed",
+    "external_id": "indeed-abc-1",
+    "fetched_at": "2026-05-20T10:00:00.000Z",
+    "company_name": "Acme Insurance Co",
+    "company_domain": "acmeinsurance.example",
+    "title": "Customer Support Specialist",
+    "description": "Handle inbound customer support tickets. Immediate start. Hiring multiple reps for backlog.",
+    "location": "Remote",
+    "posted_at": "2026-05-18T00:00:00.000Z",
+    "url": "https://indeed.example/job/1"
+  },
+  {
+    "id": "indeed_002",
+    "source": "indeed",
+    "external_id": "indeed-abc-2",
+    "fetched_at": "2026-05-20T10:00:00.000Z",
+    "company_name": "Acme Insurance Co",
+    "company_domain": "acmeinsurance.example",
+    "title": "Customer Support Representative",
+    "description": "Customer support team expansion. Urgent hiring.",
+    "location": "Remote",
+    "posted_at": "2026-05-17T00:00:00.000Z",
+    "url": "https://indeed.example/job/2"
+  },
+  {
+    "id": "indeed_003",
+    "source": "indeed",
+    "external_id": "indeed-abc-3",
+    "fetched_at": "2026-05-20T10:00:00.000Z",
+    "company_name": "Acme Insurance Co",
+    "company_domain": "acmeinsurance.example",
+    "title": "Client Support Agent",
+    "description": "Support clients with policy questions. Join our support specialists team.",
+    "location": "Remote",
+    "posted_at": "2026-05-16T00:00:00.000Z",
+    "url": "https://indeed.example/job/3"
+  },
+  {
+    "id": "indeed_004",
+    "source": "indeed",
+    "external_id": "indeed-xyz-1",
+    "fetched_at": "2026-05-20T10:00:00.000Z",
+    "company_name": "Solo SaaS Inc",
+    "company_domain": "solosaas.example",
+    "title": "Senior Backend Engineer",
+    "description": "Build APIs in Go.",
+    "location": "Remote",
+    "posted_at": "2026-05-19T00:00:00.000Z",
+    "url": "https://indeed.example/job/4"
+  },
+  {
+    "id": "career_page_001",
+    "source": "career_page",
+    "external_id": "career-acme-4",
+    "fetched_at": "2026-05-20T10:00:00.000Z",
+    "company_name": "Acme Insurance Co",
+    "company_domain": "acmeinsurance.example",
+    "title": "Customer Support Lead",
+    "description": "Lead customer support during claims surge. ASAP start.",
+    "location": "Austin, TX",
+    "posted_at": "2026-05-15T00:00:00.000Z",
+    "url": "https://acmeinsurance.example/careers/support-lead"
+  }
+]

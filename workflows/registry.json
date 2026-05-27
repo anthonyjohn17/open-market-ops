@@ -1,0 +1,40 @@
+{
+  "workflows": [
+    {
+      "id": "hiring-signals",
+      "file": "hiring-signals.yaml",
+      "status": "mvp",
+      "pitch": "Convert job postings into AI automation agency leads"
+    },
+    {
+      "id": "distressed-saas",
+      "file": "distressed-saas.yaml",
+      "status": "stub",
+      "pitch": "Find under-maintained SaaS acquisition opportunities"
+    },
+    {
+      "id": "local-closures",
+      "file": "local-business-closures.yaml",
+      "status": "stub",
+      "pitch": "Track distressed local assets and operational gaps"
+    },
+    {
+      "id": "ai-agency-prospecting",
+      "file": "ai-agency-prospecting.yaml",
+      "status": "stub",
+      "pitch": "Surface companies likely needing automation"
+    },
+    {
+      "id": "expired-domains",
+      "file": "expired-domains.yaml",
+      "status": "stub",
+      "pitch": "Discover underpriced SEO and lead-gen assets"
+    },
+    {
+      "id": "market-triggers",
+      "file": "market-triggers.yaml",
+      "status": "stub",
+      "pitch": "Monitor operational change events across public data"
+    }
+  ]
+}

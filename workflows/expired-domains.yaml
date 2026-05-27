@@ -1,0 +1,57 @@
+# STUB — validate only (v0.3+)
+# Concept: Domain + SEO Decay Scanner — see concept.md Example 4
+
+name: expired_domain_intelligence
+version: "0.0.1"
+description: Discover underpriced SEO and lead-gen domain assets (not runnable in v0.1)
+wedge: expired-domains
+
+feed:
+  connectors:
+    - id: expireddomains
+      config: { enabled: false }
+
+detect:
+  rules:
+    - domain_expiry
+    - rank_decline
+    - owner_inactivity
+
+asset:
+  type: domain
+  extract:
+    - domain_name
+    - backlink_count
+    - niche
+
+trigger:
+  window_days: 60
+  boost_if:
+    - domain_expiry
+
+buyer:
+  segments:
+    - seo_agencies
+    - affiliate_operators
+    - local_businesses
+  match: buyer-matching/v1
+
+monetize:
+  recommended:
+    - flip
+    - lead_generation
+  scoring: monetization-engine/v1
+
+scoring:
+  min_opportunity_score: 50
+  weights:
+    urgency: 0.25
+    buyer_density: 0.2
+    monetization_potential: 0.3
+    competition: 0.15
+    liquidity_speed: 0.1
+
+output:
+  formats:
+    - opportunity_cards
+  min_score: 60

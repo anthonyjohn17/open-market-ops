@@ -1,0 +1,54 @@
+# STUB — horizontal trigger monitoring (v0.4+)
+# Concept: Market Trigger Detection wedge from ideas.md
+
+name: market_trigger_detection
+version: "0.0.1"
+description: Monitor operational change events across public data (not runnable in v0.1)
+wedge: market-triggers
+
+feed:
+  connectors:
+    - id: multi_source_placeholder
+      config: { enabled: false }
+
+detect:
+  rules:
+    - hiring_surge
+    - closure
+    - rank_decline
+    - funding_round
+
+asset:
+  type: generic
+  extract:
+    - event_type
+    - entity_id
+
+trigger:
+  window_days: 7
+
+buyer:
+  segments:
+    - intelligence_subscribers
+    - agencies
+  match: buyer-matching/v1
+
+monetize:
+  recommended:
+    - data_product
+    - retainer
+  scoring: monetization-engine/v1
+
+scoring:
+  min_opportunity_score: 40
+  weights:
+    urgency: 0.35
+    buyer_density: 0.15
+    monetization_potential: 0.2
+    competition: 0.15
+    liquidity_speed: 0.15
+
+output:
+  formats:
+    - alerts_jsonl
+  min_score: 50
