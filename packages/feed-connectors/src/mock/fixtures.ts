@@ -8,7 +8,7 @@ function resolveRepoRoot(): string {
   if (process.env.OMO_ROOT) return resolve(process.env.OMO_ROOT);
   const cwd = process.cwd();
   if (cwd.includes("open-market-ops")) {
-    const idx = cwd.indexOf("open-market-ops");
+    const idx = cwd.lastIndexOf("open-market-ops");
     return resolve(cwd.slice(0, idx + "open-market-ops".length));
   }
   return resolve(dirname(fileURLToPath(import.meta.url)), "../../../..");
